@@ -37,15 +37,10 @@ Q_A5 = ["Q: What is unpickling?\n",
         f"{Q_A1[1]} \n",
         "4. They are syntax constructions to ease the creation of a Dictionary or List based on existing iterable.\n"];
 
-
-
 Answers = [Q_A1[1], Q_A2[3], Q_A3[3], Q_A4[1]]
 
-
 def getRandomQuestion(*args):
-    Questions = [args]
-    print(Questions[0][randint(0,len(args))])
-
-
-
+        whole  = args[randint(0,len(args))-1];
+        for each in whole:
+                print(each)
 getRandomQuestion(Q_A1, Q_A2, Q_A3, Q_A4, Q_A5)
