@@ -1,11 +1,14 @@
-""""
 
+""""
+Manmeet Singh
 Create a quiz and record the name and score in the seprate file Quiz will be on Python programming language It will have level of difficulties
 https://www.guru99.com/python-interview-questions-answers.html
 
 """
+
 from random import randint
 
+# List of Questions 
 Q_A1 = [
         "Q: What is Python?\n",
         "Python is a programming language with objects, modules, threads, exceptions and automatic memory management.",
@@ -37,8 +40,8 @@ Q_A5 = ["Q: What is unpickling?\n",
         f"{Q_A1[1]}",
         "They are syntax constructions to ease the creation of a Dictionary or List based on existing iterable."];
 
-Answers = [Q_A1[1], Q_A2[3], Q_A3[3], Q_A4[1]]
 
+# This function prints the random question to the screen
 def getRandomQuestion(*args):
         whole  = args[randint(0,len(args))-1];
         counter = 0;
@@ -47,7 +50,12 @@ def getRandomQuestion(*args):
                 if(counter > 0):
                         print(str(counter) + ". " + each)
                 counter += 1;
-getRandomQuestion(Q_A1, Q_A2, Q_A3, Q_A4, Q_A5)
 
-answer = input("\nPick a number to answer the following question\n->");
-print("You picked {}".format(answer))
+# This function takes the user data and returns it 
+def response():
+        answer = input("\nPick a number to answer the following question\n->");
+        return answer;
+
+
+Answers = [Q_A1[1], Q_A2[3], Q_A3[3], Q_A4[1]]
+getRandomQuestion(Q_A1, Q_A2, Q_A3, Q_A4, Q_A5)
